@@ -35,11 +35,8 @@ socket.emit('messageFromTerminalToServer', terminalName, "connection");
 //send message to server
 function abrirPuerta(){
   console.log("Terminal: recibido orden de abrir puerta");
+  socket.emit('messageFromTerminalToServer', terminalName, "doorOpened");
 
-  // var payload = {
-  //   action : "abrirPuerta",
-  // };
-  // console.log(payload);
   return false;
 
 }
