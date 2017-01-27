@@ -41,7 +41,7 @@ function abrirPuerta(){
 // GPIO pin of the led
 var configPin = 7;
 // Blinking interval in usec
-var configTimeout = 1000;
+var configTimeout = 2000;
 
 wpi.setup('wpi');
 wpi.pinMode(configPin, wpi.OUTPUT);
@@ -51,7 +51,7 @@ var i = 0;
 
 var interval = setInterval(function() {
 	i++;
-	if (i <= 6){
+	if (i <= 2){
 	isLedOn = +!isLedOn;
 	//isLedOn = !isLedOn;
 	wpi.digitalWrite(configPin, isLedOn );
