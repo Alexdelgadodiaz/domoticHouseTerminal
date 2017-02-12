@@ -1,6 +1,6 @@
-let socketId =      "webAppPi";
-let terminalName =  "terminalSonatoPi";
-let serverId =      "serverPi";
+var socketId =      "webAppPi";
+var terminalName =  "terminalSonatoPi";
+var serverId =      "serverPi";
 
 var io = require('socket.io-client'),
 socket = io.connect('http://192.168.1.97:8080');
