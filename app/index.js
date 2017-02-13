@@ -50,14 +50,9 @@ var isLedOn = 0;
 var i = 0;
 
 var interval = setInterval(function() {
-	i++;
-	if (i <= 2){
-	isLedOn = +!isLedOn;
-	//isLedOn = !isLedOn;
-	wpi.digitalWrite(configPin, isLedOn );
-	}else{
-	clearInterval(interval);
-	}
+
+	wpi.digitalWrite(configPin, 1 );
+
 }, configTimeout);
 
   return false;
