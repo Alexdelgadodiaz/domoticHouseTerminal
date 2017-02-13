@@ -53,10 +53,10 @@ var interval = setInterval(function() {
 	i++;
 	if (i == 1){
 	//isLedOn = !isLedOn;
-	wpi.digitalWrite(configPin, 1 );
+	wpi.digitalWrite(configPin, 0 );
 	}else{
 	clearInterval(interval);
-  wpi.digitalWrite(configPin, 0 );
+  wpi.digitalWrite(configPin, 1 );
 
 	}
 }, configTimeout);
