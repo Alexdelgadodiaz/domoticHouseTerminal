@@ -49,10 +49,16 @@ wpi.pinMode(configPin, wpi.OUTPUT);
 var isLedOn = 0;
 var i = 0;
 
-function() {
+var interval = setInterval(function() {
+	i++;
+	if (i == 1){
 	//isLedOn = !isLedOn;
 	wpi.digitalWrite(configPin, 1 );
+	}else{
+	clearInterval(interval);
+  wpi.digitalWrite(configPin, 0 );
 
+	}
 }, configTimeout);
 
   return false;
